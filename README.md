@@ -1,20 +1,13 @@
 # backupdb
 
-- python file create
-home/pi/backupdb/backupdb.py
+- python file create   home/pi/backupdb/backupdb.py
 
-- script file create
-home/pi/backupdb/script.sh
-- file privilege
-chmod +x script.sh
+- script file create   home/pi/backupdb/script.sh
 
-- scheduling program
-crontab -e
-*/60 * * * * /home/pi/backupdb/script.sh
-- program restart
-service crontab restart
-systemctl restart cron.service
+- file privilege    chmod +x script.sh
 
-mkdir /home/pi/usb
-fdisk -l
-mount -t vfat /dev/sdb1 /home/pi/usb
+- scheduling program   crontab -e   */60 * * * * /home/pi/backupdb/script.sh
+
+- program restart  service crontab restart   systemctl restart cron.service
+
+- usb mount  mkdir /home/pi/usb    fdisk -l   mount -t vfat /dev/sdb1 /home/pi/usb
